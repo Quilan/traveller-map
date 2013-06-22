@@ -1,0 +1,91 @@
+Col,Row,Name,Size,Atmosphere,Temperature,Hydrographics,Population,Government,Law,Starport,Tech,Portdm,sizdm,atmodm,hydrodm,popdm,govdm,Rand,Bases,Trade Codes,Travel Code,Contraband,Notes,Links
+01,01,,-,,,,,,,,,,,,,,,,,,,,,
+01,02,,-,,,,,,,,,,,,,,,,,,,,,
+01,03,Venka,9,9,Hot,6,2,1,0,X,7,,,,,1,,6,Gas Giant,"Garden, Low-population",,"Weapons, Drugs, Travellers",New colony set up by corporation; starport under construction,
+01,04,Harepoint,0,0,Swings,0,4,9,10,X,6,,2,1,1,1,,1,Gas Giant,"Asteroid, Non-industrial, Poor, Vacuum",Amber,"Tech, Weapons, Drugs, Travellers, Psionics",Large mining asteroid: Government ignores fact that technologies required for survival are failing.,
+01,05,Rolk’s Fate,4,A,Hot,1,6,7,7,C,9,2,1,1,,,2,3,"Pirate, Gas Giant","Fluid Oceans, Non-industrial",Amber,"Drugs, Psionics",Governments intentionally promote piracy to undermine faction controlling starport,4
+01,06,2734-0106,4,1,Swings-cold,0,1,0,0,X,10,,1,1,1,1,1,5,Gas Giant,Low-population,,,Tiny research outpost,"1,3"
+01,07,,-,,,,,,,,,,,,,,,,,,,,,
+01,08,Aquarius,3,0,Swings,0,4,3,5,D,8,,1,1,1,1,,4,Gas Giant,"Non-industrial, Poor, Vacuum",,"Tech, Weapons, Travellers",Government headed by all-female council of 12 ruling families,"2,5"
+01,09,,-,,,,,,,,,,,,,,,,,,,,,
+01,10,Pelega,5,5,Temperate,9,6,5,1,D,6,,,,1,,1,4,"Scout, Gas Giant",Non-industrial,,"Tech, Weapons, Computers",Small islands mainly run by the most technically qualified,2
+02,01,,-,,,,,,,,,,,,,,,,,,,,,
+02,02,,-,,,,,,,,,,,,,,,,,,,,,
+02,03,,-,,,,,,,,,,,,,,,,,,,,,
+02,04,,-,,,,,,,,,,,,,,,,,,,,,
+02,05,,-,,,,,,,,,,,,,,,,,,,,,
+02,06,Thalassa,5,6,Temperate,4,7,3,5,C,3,2,,,,,,1,"Research, Gas Giant","Agricultural, Garden, Low-tech, Rich",Amber,"Tech, Weapons, Travellers",Religious schism between worshippers of “sky-striders” and denouncers of “star-daemons”. Unfortunately they also produce several desirable luxuries.,"2,4,6"
+02,07,The Neck,6,8,Hot,0,3,3,0,C,9,,,,1,1,,3,Gas Giant,"Desert, Low-population, Low-tech, Poor",Amber,"Tech, Weapons, Travellers",Ruling class rule by employing mercenaries with high-tech equipment,"1,5,4"
+02,08,,-,,,,,,,,,,,,,,,,,,,,,"1,4"
+02,09,Firaga,2,0,Swings,0,6,9,7,C,7,2,1,1,1,,,2,"Scout, TAS, Pirate","Non-agricultural, Non-industrial, Vacuum",,"Tech, Weapons, Drugs, Travellers, Psionics",Government control largely revolves around collecting massive quantities of useless information,"1,5"
+02,10,,-,,,,,,,,,,,,,,,,,,,,,
+03,01,Redwater,6,5,Temperate,9,2,0,0,E,4,,,,1,1,1,1,Gas Giant,"Low-population, Low-tech",Amber,,Tiny scavenger town loots materials from ancient Human civilisation,"3,4"
+03,02,Wesnoth,6,8,Temperate,6,9,7,9,B,8,4,,,,1,2,1,"Scout, TAS, Consulate, Gas Giant","Garden, High population",Red,"Weapons, Info, Travellers",Planet currently involved in high-intensity internal conflict,1
+03,03,,-,,,,,,,,,,,,,,,,,,,,,
+03,04,Indus,3,0,Swings,0,4,5,5,D,9,,1,1,1,1,1,4,Gas Giant,"Non-industrial, Poor, Vacuum",,"Tech, Weapons, Computers","Successful mining base revolving around highly qualified, self-selecting teams","2,4"
+03,05,The Wall,1,0,Swings,0,4,2,2,B,12,4,2,1,1,1,,3,"Navy, TAS, Consulate, Gas Giant","High Tech, Non-industrial, Poor, Vacuum",,Drugs,Huge orbital complex formed from several large asteroids; Major Navy base,"1,4"
+03,06,Avina,7,11,Temperate,1,7,12,12,B,10,4,,1,,,,5,"Navy, Scout, Consulate, Gas Giant","Fluid Oceans, Ice-capped, Non-agricultural",Amber,Weapons,World ruled by planetary military; much tension between rulers and Imperial Navy base,"1,3,5"
+03,07,,-,,,,,,,,,,,,,,,,,,,,,
+03,08,Lemna,6,7,Cold,3,3,2,1,X,2,,,,,1,,1,Gas Giant,"Low-population, Low-tech, Poor",,Drugs,Population worship arriving starships as messengers from gods,
+03,09,,-,,,,,,,,,,,,,,,,,,,,,
+03,10,,-,,,,,,,,,,,,,,,,,,,,,
+04,01,2734-0401,4,10,Hot,0,0,-,0,X,0,,1,1,1,,,6,Gas Giant,Barren,Amber,,Atmosphere almost 100% methane,"3,6"
+04,02,,-,,,,,,,,,,,,,,,,,,,,,
+04,03,,-,,,,,,,,,,,,,,,,,,,,,"2,5"
+04,04,,-,,,,,,,,,,,,,,,,,,,,,
+04,05,,-,,,,,,,,,,,,,,,,,,,,,
+04,06,Highport,6,6,Roasting,4,8,6,4,A,11,,,,,,,5,"Navy, Research, TAS, Consulate","Garden, Rich",,"Weapons, Tech, Travellers",Currently run directly by Imperial Governor due to secession attempts by previous government ten years ago. Planet is mostly extremely hot rainforest.,"3,4,6"
+04,07,Rolks’ Fire,9,8,Roasting(!),1,8,11,12,B,7,4,,,,,,3,"Scout, TAS",Rich,Amber,"Weapons, Tech, Computers",Previous king replaced by weak ruler,"1,2,4"
+04,08,,-,,,,,,,,,,,,,,,,,,,,,"1,3"
+04,09,,-,,,,,,,,,,,,,,,,,,,,,
+04,10,Libertas,6,2,Temperate,2,5,4,3,E,4,,,1,,1,,2,Gas Giant,"Low-tech, Non-industrial, Poor",,"Drugs, Weapons, Psionics",New republic trying desperately to drag itself out of a civilisation-threatening dark age,
+05,01,,-,,,,,,,,,,,,,,,,,,,,,
+05,02,Lalande,5,4,Temperate,3,5,3,2,B,10,4,,,,1,,5,"Navy, TAS, Gas Giant","Non-industrial, Poor",,"Tech, Weapons, Travellers",World is run by Planetary Lord from comfort of large mansion near starport,"4,6"
+05,03,Leviathan,9,7,Temperate,10,2,2,2,D,5,,,,2,1,,2,"Scout, Gas Giant","Low-population, Low-tech, Water world",,Drugs,"Starport is large, floating scout base; detailed survey of planet in progress. ","1,3,5"
+05,04,,-,,,,,,,,,,,,,,,,,,,,,
+05,05,,-,,,,,,,,,,,,,,,,,,,,,
+05,06,,-,,,,,,,,,,,,,,,,,,,,,
+05,07,High Deeps,9,13,Temperate,6,6,2,4,E,5,,,1,,,,3,Gas Giant,"Fluid Oceans, Ice-capped, Low-tech, Non-industrial",Amber,Drugs,Former hydrocarbon mining operation,"3,5,6"
+05,08,,-,,,,,,,,,,,,,,,,,,,,,
+05,09,Falkner,8,9,Temperate,5,1,2,1,E,4,,,,,1,,3,,"Garden, Low-population, Low-tech",,Drugs,Population intentionally eschews higher technologies,6
+05,10,,-,,,,,,,,,,,,,,,,,,,,,
+06,01,,-,,,,,,,,,,,,,,,,,,,,,
+06,02,,-,,,,,,,,,,,,,,,,,,,,,
+06,03,,-,,,,,,,,,,,,,,,,,,,,,"3,6"
+06,04,2734-0604,7,9,Cold,10,0,-,0,X,0,,,,2,,,6,Gas Giant,"Barren, Water world",,,100% water surface; High concentrations of CO2,
+06,05,,-,,,,,,,,,,,,,,,,,,,,,
+06,06,Boxcars,5,0,Swings-Hot,0,1,3,3,X,7,,,1,1,1,,4,Gas Giant,"Low-population, Vacuum",,"Tech, Weapons, Travellers",Mining base run by patriarchal family head.,
+06,07,Unitas,3,1,Swings,2,8,9,14,D,8,,1,1,,,,6,Gas Giant,"Ice-capped, Non-agricultural",Amber,"Tech, Weapons, Drugs, Travellers, Psionics",Instructions for running world delivered by computer programmed to maximise productivity,6
+06,08,,-,,,,,,,,,,,,,,,,,,,,,
+06,09,,-,,,,,,,,,,,,,,,,,,,,,
+06,10,2734-0610,1,0,Swings-Hot,0,0,-,0,X,0,,2,1,1,,,5,,"Barren, Vacuum",,,"Hot, airless planet near star",
+07,01,,-,,,,,,,,,,,,,,,,,,,,,
+07,02,2734-0702,4,0,Swings,5,1,0,0,X,9,,,1,,1,1,6,"Gas Giant, Research","Ice-capped, Low-population, Vacuum",,,Tiny long-term research outpost,
+07,03,,-,,,,,,,,,,,,,,,,,,,,,
+07,04,Deeper’s Grave,3,1,Swings-Roasting,0,1,1,0,D,5,,,1,1,1,,2,Gas Giant,"Low-population, Low-tech",,"Weapons, Drugs, Travellers",Last remnants of forgotten mining outpost,"2,6"
+07,05,,-,,,,,,,,,,,,,,,,,,,,,
+07,06,,-,,,,,,,,,,,,,,,,,,,,,
+07,07,,-,,,,,,,,,,,,,,,,,,,,,
+07,08,Epic Shores,2,0,Swings,0,2,13,9,X,9,,1,1,1,1,1,4,Gas Giant,"Low-population, Poor, Vacuum",Amber,All,Survivalist cult attempting to set up colony,
+07,09,,-,,,,,,,,,,,,,,,,,,,,,
+07,10,Nova Socia,2,0,Swings-Hot,0,4,9,14,X,8,,1,1,1,1,,4,Gas Giant,"Non-industrial, Poor, Vacuum",Amber,"Tech, Weapons, Drugs, Travellers, Psionics",Oppressive bureaucracy consumes almost 100% of resources; Starport crippled by conflicting edicts,
+08,01,Schar’s World,10,7,Temperate,7,0,-,0,X,0,,,,,,,2,Gas Giant,"Barren, Garden",Red,,ALL SURVEYS AND LANDINGS FORBIDDEN BY IMPERIAL EDICT,
+08,02,2734-0802,1,0,Swings,0,0,-,0,X,0,,2,1,1,,,3,Gas Giant,"Barren, Vacuum",,,"Small, rocky world",
+08,03,Drought,6,7,Hot,0,5,1,4,D,5,,,,1,1,,3,"Scout, Gas Giant","Desert, Low-tech, Non-industrial, Poor",,"Weapons, Drugs, Travellers",World ruled over by “king” who thinks Scout service is here to bring water to planet,5
+08,04,,-,,,,,,,,,,,,,,,,,,,,,
+08,05,Eva Nova,7,4,Cold,7,3,1,0,D,5,,,,,1,,4,Scout,"Garden, Low-population, Low-tech",Amber,"Weapons, Drugs, Travellers","Adventurers spread out from scout base, seeking rare pharmaceuticals; Sell to chemicals company. Dangerous wildlife",
+08,06,,-,,,,,,,,,,,,,,,,,,,,,
+08,07,,-,,,,,,,,,,,,,,,,,,,,,
+08,08,Freeport,4,0,Swings-Hot,0,3,4,4,X,7,,,1,1,1,,4,,"Low-population, Poor, Vacuum",,"Drugs, Weapons, Psionics",Recent colony set up by libertarians,
+08,09,,-,,,,,,,,,,,,,,,,,,,,,
+08,10,,-,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,

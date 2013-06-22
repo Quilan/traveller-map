@@ -1,0 +1,65 @@
+.popup_content
+  .first_column
+    %ul
+      %li
+        .label Name:
+        .data= @system.name
+      %li
+        .label Size:
+        .data= @system.show_size
+      %li
+        .label Gravity:
+        .data{:class => "#{@system.size_risk}-status"}= @system.show_gravity
+        -if @system.size_message.present?
+          .label
+          .data{:class => "#{@system.size_risk}-status"}= @system.size_message
+      %li
+        .label Atmosphere:
+        .data{:class => "#{@system.atmosphere_risk}-status"}= @system.show_atmosphere
+        -if @system.atmosphere_message.present?
+          .data{:class => "#{@system.atmosphere_risk}-status"}= @system.atmosphere_message
+      %li
+        .label Hydrographics:
+        .data= @system.show_hydrographics
+      %li
+        .label Temperature:
+        .data= @system.temperature
+      %li
+        .label Population:
+        .data= @system.show_population
+      %li
+        .label Government:
+        .data{:class => "#{@system.government_risk}-status"}= @system.show_government
+      %li
+        .label Law Level:
+        .data{:class => "#{@system.law_risk}-status"}= @system.show_law_level
+      %li
+        .label Starport Grade:
+        .data{:class => "#{@system.starport_risk}-status"}= @system.show_starport
+      %li
+        .label Technology Level:
+        .data= @system.show_tech
+  .second_column
+    %ul
+      %li
+        .label Facilities:
+        - @system.show_bases.each do |base|
+          .data= base
+      %li
+        .label Trade Codes:
+        - @system.trade_codes.each do |code|
+          .data
+            = code
+      %li
+        .label Travel Code:
+        - if @system.travel_code.present?
+          .data{:class => @system.travel_code == "Amber" ? "yellow-status" : "red-status"}= @system.travel_code
+        -else
+          .data{:class => "green-status"} Green
+      %li
+        .label Restrictions:
+        - @system.show_contraband.each do |contraband|
+          .data= contraband
+      %li
+        .label Notes:
+        .data= @system.notes

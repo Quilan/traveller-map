@@ -1,0 +1,51 @@
+.content
+  -@systems.each do |row|
+    .hexrow
+      - row.each do |system|
+        .hex{:id => system.id, :class => system.name.present? ? "present" : ""}
+          .centre
+            .hexcontent
+              - if system.travel_code == "Amber"
+                .amber
+              - elsif system.travel_code == "Red"
+                .red
+              - if system.bases.include? "Navy"
+                .naval
+                  ★
+              - if system.bases.include? "Scout"
+                .scout
+                  ▲
+              - if system.bases.include? "Research"
+                .research
+                  π
+              - if system.bases.include? "TAS"
+                .tas
+                  ☼
+              - if system.bases.include? "Consulate"
+                .consulate
+                  ∎
+              - if system.bases.include? "Pirate"
+                .pirate
+                  ☠
+              - if system.bases.include? "Gas Giant"
+                .gasgiant
+              %span.coords
+                #{system.col.to_s.rjust(2, "0")}#{system.row.to_s.rjust(2, "0")}
+              - if system.name.present?
+                %span.starport
+                  = system.starport
+              %span.planet
+                - unless system.name.blank?
+                  .circle
+              %span.name
+                = system.name
+            .tophalf{:class => system.links.include?(1) ? "background" : ""}
+            .bottomhalf{:class => system.links.include?(4) ? "background" : ""}
+
+
+          .slantright
+            .tophalf{:class => system.links.include?(2) ? "background" : ""}
+            .bottomhalf{:class => system.links.include?(5) ? "background" : ""}
+          .slantleft
+            .tophalf{:class => system.links.include?(6) ? "background" : ""}
+            .bottomhalf{:class => system.links.include?(3) ? "background" : ""}
