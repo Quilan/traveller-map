@@ -17,4 +17,12 @@ class SystemsController < ApplicationController
     @system = System.find(params[:system_id])
     render :partial => true
   end
+  def edit
+    @system = System.find(params[:system_id])
+    render :partial => true
+  end
+  def update
+    @system = System.find(params[:id])
+    @system.update_attributes(params[:system])
+  end
 end
