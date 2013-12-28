@@ -1,7 +1,8 @@
 class System < ActiveRecord::Base
   # attr_accessible :title, :body
-  attr_accessible :name, :col, :row, :size, :atmosphere, :temperature, :hydrographics, :population, :government, :law,
-                  :starport, :tech, :bases, :trade_codes, :travel_code, :contraband, :notes, :links
+  # attr_accessible is removed in rails 4 and replaced by strong parameters. Ask Joe if you don't know how to use this
+  # attr_accessible :name, :col, :row, :size, :atmosphere, :temperature, :hydrographics, :population, :government, :law,
+  #                 :starport, :tech, :bases, :trade_codes, :travel_code, :contraband, :notes, :links
 
   serialize :contraband
   serialize :trade_codes
