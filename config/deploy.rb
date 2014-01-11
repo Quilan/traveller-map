@@ -1,8 +1,6 @@
 set :application, 'traveller_map'
 set :repo_url, 'git@github.com:Quilan/traveller-map.git'
 
-ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
-
 set :deploy_to, '/var/www/traveller_map'
 set :scm, :git
 
