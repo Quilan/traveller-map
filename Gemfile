@@ -6,7 +6,7 @@ gem 'rack', "~> 1.5.2"
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
+gem 'mysql2'
 gem "sass-rails"
 gem "coffee-rails"
 # Gems used only for assets and not required
@@ -23,8 +23,12 @@ gem 'jquery-rails'
 gem 'unicorn'
 
 # Deploy with Capistrano
-gem 'capistrano'
-gem 'sshkit', '~> 1.3', github: 'capistrano/sshkit'
+group :development do
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'sshkit', '~> 1.3', github: 'capistrano/sshkit'
+end
 
 # To use debugger
 # gem 'debugger'

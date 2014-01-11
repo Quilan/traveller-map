@@ -8,6 +8,7 @@ set :stage, :production
 role :app, %w{deploy@198.211.122.138}
 role :web, %w{deploy@198.211.122.138}
 role :db,  %w{deploy@198.211.122.138}
+set :default_shell, "/bin/bash -l"
 
 # Extended Server Syntax
 # ======================

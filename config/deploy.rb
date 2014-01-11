@@ -1,7 +1,7 @@
 set :application, 'traveller_map'
 set :repo_url, 'git@github.com:Quilan/traveller-map.git'
 
-# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
+ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
 
 set :deploy_to, '/var/www/traveller_map'
 set :scm, :git
@@ -23,7 +23,7 @@ namespace :deploy do
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
       # Your restart mechanism here, for example:
-      execute :service, 'unicorn restart'
+      execute '/etc/init.d/unicorn restart'
     end
   end
 
