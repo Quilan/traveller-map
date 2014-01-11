@@ -20,10 +20,11 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Deploy with Capistrano
-# gem 'capistrano'
+gem 'capistrano'
+gem 'sshkit', '~> 1.3', github: 'capistrano/sshkit'
 
 # To use debugger
 # gem 'debugger'
