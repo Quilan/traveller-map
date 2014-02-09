@@ -5,4 +5,6 @@ $(document).ready ->
   $(".present").on "click", (e) ->
     $(this).colorbox({
       href: "systems/"+ $(this).attr('id') + "/render_popup"
+      onComplete: ->
+        $('.colorbox').colorbox()
       })

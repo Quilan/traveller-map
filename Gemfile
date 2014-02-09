@@ -22,6 +22,8 @@ gem 'jquery-rails'
 # Use unicorn as the app server
 gem 'unicorn'
 
+gem 'faker'
+
 # Deploy with Capistrano
 group :development do
   gem 'capistrano'

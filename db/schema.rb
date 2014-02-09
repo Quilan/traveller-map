@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140209084644) do
+ActiveRecord::Schema.define(version: 20140209190810) do
 
   create_table "base_systems", force: true do |t|
     t.integer  "system_id"
@@ -30,6 +30,26 @@ ActiveRecord::Schema.define(version: 20140209084644) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "broker_trade_goods", force: true do |t|
+    t.integer  "broker_id"
+    t.integer  "trade_good_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "broker_trade_goods", ["broker_id"], name: "index_broker_trade_goods_on_broker_id", using: :btree
+  add_index "broker_trade_goods", ["trade_good_id"], name: "index_broker_trade_goods_on_trade_good_id", using: :btree
+
+  create_table "brokers", force: true do |t|
+    t.string   "name"
+    t.integer  "system_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "brokers", ["system_id"], name: "index_brokers_on_system_id", using: :btree
 
   create_table "system_trade_codes", force: true do |t|
     t.integer  "system_id"

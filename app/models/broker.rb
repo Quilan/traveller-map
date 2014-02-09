@@ -1,4 +1,21 @@
-class Broker
+class Broker < ActiveRecord::Base
+  belongs_to :system
+  has_many :broker_trade_goods
+
+  def assign_items(systems)
+    goods = TradeGood.available_in(system) + TradeGood.special_items(rand(6)+1)
+
+    items = []
+    goods.each do |item|
+      qty = item.ton_multiplier * (rand(6)+1)
+
+      if good = broker_trade_goods.detect{|g| g.trade_good == item}
+        good.quantity += qty
+      else
+        self.broker_trade_goods << BrokerTradeGood.new(trade_good: item, quantity: qty)
+      end
+    end
+  end
 
   def self.broker_items_for(system)
     goods = TradeGood.available_in(system) + TradeGood.special_items(rand(6)+1)
