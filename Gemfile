@@ -24,6 +24,8 @@ gem 'unicorn'
 
 gem 'faker'
 
+gem 'uglifier'
+
 # Deploy with Capistrano
 group :development do
   gem 'capistrano'
@@ -32,9 +34,6 @@ group :development do
   gem 'sshkit', '~> 1.3', github: 'capistrano/sshkit'
 end
 
-group :assets do
-  gem 'uglifier'
-end
 
 # To use debugger
 # gem 'debugger'
