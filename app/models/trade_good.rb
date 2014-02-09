@@ -3,6 +3,8 @@ class TradeGood < ActiveRecord::Base
   # serialize :available
   # serialize :purchase_dm
   # serialize :sale_dm
+
+  has_many :broker_trade_goods
   has_many :trade_code_goods
   has_many :available_trade_code_goods, -> {where(kind: 'available')}, class_name: "TradeCodeGood"
   has_many :available_trade_codes, through: :available_trade_code_goods, class_name: "TradeCode", source: :trade_code
@@ -16,6 +18,7 @@ class TradeGood < ActiveRecord::Base
   scope :available_in, -> (system) {
     joins(:available_trade_codes)
     .where(trade_codes: {id: system.trade_code_ids})
+    .uniq
   }
 
   # def self.items_for(system)
@@ -49,28 +52,28 @@ class TradeGood < ActiveRecord::Base
     mod_for(:sale, system) - mod_for(:purchase, system)
   end
 
-  def mod_for(kind, system)
-    mod = 0
+  # def mod_for(kind, system)
+  #   mod = 0
 
-    send(attr).each do |code|
-      name, mod_for_code = code.split(/((\+|\-)\d+)/)
-      name = name.strip
-      mod_for_code = mod_for_code.to_i
+  #   send(attr).each do |code|
+  #     name, mod_for_code = code.split(/((\+|\-)\d+)/)
+  #     name = name.strip
+  #     mod_for_code = mod_for_code.to_i
 
-      if system.trade_codes.include?(name)
-        mod = [mod, mod_for_code].max
-      end
+  #     if system.trade_codes.include?(name)
+  #       mod = [mod, mod_for_code].max
+  #     end
 
-      if name == 'Amber Zone' && system.travel_code == 'Amber'
-        mod = [mod_for_code, mod].max
-      end
+  #     if name == 'Amber Zone' && system.travel_code == 'Amber'
+  #       mod = [mod_for_code, mod].max
+  #     end
 
-      if name == 'Red Zone' && system.travel_code == 'Red'
-        mod = [mod_for_code, mod].max
-      end
+  #     if name == 'Red Zone' && system.travel_code == 'Red'
+  #       mod = [mod_for_code, mod].max
+  #     end
 
-    end
-  end
+  #   end
+  # end
 
   def mod_for(kind, system)
     mod = 0

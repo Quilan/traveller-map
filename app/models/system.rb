@@ -15,10 +15,8 @@ class System < ActiveRecord::Base
   has_many :system_trade_codes
   has_many :trade_codes, through: :system_trade_codes
 
-  has_many :trade_code_goods
-  has_many :trade_goods, through: :trade_codes
-
   scope :with_planets, where("name is not null")
+  has_many :brokers
 
   WORLD_SIZES = {
     0 => "~800km",
@@ -264,6 +262,14 @@ class System < ActiveRecord::Base
 
   def show_trade_codes
     return self.trade_codes
+  end
+
+
+  def generate_broker
+    b = self.brokers.new(name: [Faker::Name.first_name, Faker::Name.last_name].join(' '))
+    b.assign_items(self)
+    b.save!
+    b
   end
 
 end
