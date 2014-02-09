@@ -32,5 +32,9 @@ group :development do
   gem 'sshkit', '~> 1.3', github: 'capistrano/sshkit'
 end
 
+group :assets do
+  gem 'uglifier'
+end
+
 # To use debugger
 # gem 'debugger'
