@@ -13,6 +13,7 @@ class BrokersController < ApplicationController
   def destroy
     @broker = @system.brokers.find(params[:id])
     @broker.destroy
+    @system.reload
   end
 
   private

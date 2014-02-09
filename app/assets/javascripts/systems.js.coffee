@@ -2,9 +2,16 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $(document).ready ->
-  $(".present").on "click", (e) ->
-    $(this).colorbox({
-      href: "systems/"+ $(this).attr('id') + "/render_popup"
-      onComplete: ->
-        $('.colorbox').colorbox()
-      })
+  $('.present').click ->
+    $.colorbox({
+      href: "systems/"+ $(this).attr('id') + "/render_popup",
+#      trapFocus: false,
+#      onComplete: ->
+#        $('#brokers .colorbox').colorbox()
+    })
+
+$(document).on 'click', '#brokers .colorbox', (e) ->
+  $.colorbox({
+    href: $(this).attr('href')
+  })
+  e.preventDefault()
