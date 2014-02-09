@@ -5,9 +5,21 @@ class System < ActiveRecord::Base
   #                 :starport, :tech, :bases, :trade_codes, :travel_code, :contraband, :notes, :links
 
   serialize :contraband
-  serialize :trade_codes
+  # serialize :trade_codes
   serialize :links
-  serialize :bases
+  # serialize :bases
+
+  has_many :base_systems
+  has_many :bases, through: :base_systems, source: :base
+
+  has_many :system_trade_codes
+  has_many :trade_codes, through: :system_trade_codes
+
+  has_many :trade_code_goods
+  has_many :trade_goods, through: :trade_codes
+
+  scope :with_planets, where("name is not null")
+
   WORLD_SIZES = {
     0 => "~800km",
     1 => "~1,600km",
@@ -43,7 +55,7 @@ class System < ActiveRecord::Base
   end
   def size_risk
     if (self.size <= 6 || self.size >= 9 )
-      return "yellow" 
+      return "yellow"
     else
       return "green"
     end
@@ -246,23 +258,8 @@ class System < ActiveRecord::Base
     return "#{self.tech} - #{WORLD_TECHNOLOGY[self.tech]}"
   end
 
-  WORLD_BASES= {
-    "Navy" => "Navy Base",
-    "Scout" => "Scout Base",
-    "TAS" => "TAS Hostel",
-    "Research" => "Research Outpost",
-    "Consulate" => "Imperial Consulate",
-    "Gas Giant" => "Gas Giant present",
-    "Pirate" => "WARNING: PIRATE ACTIVITY REPORTED"
-  }
-
   def show_bases
-    bases = []
-    self.bases.each do |base|
-      bases << WORLD_BASES[base]
-    end
-    bases << "None" if bases.blank?
-    return bases
+    bases.present? ? bases.map(&:description) : ["None"]
   end
 
   def show_trade_codes

@@ -1,7 +1,7 @@
 class Broker
 
   def self.broker_items_for(system)
-    goods = TradeGood.items_for(system) + TradeGood.special_items(rand(6)+1)
+    goods = TradeGood.available_in(system) + TradeGood.special_items(rand(6)+1)
 
     items = []
     goods.each do |item|
@@ -23,6 +23,7 @@ class Broker
       puts "Examples: #{good[:item].examples}"
       puts " "
     end
+    0
   end
 
 end
