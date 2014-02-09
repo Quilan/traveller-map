@@ -1,0 +1,37 @@
+d66,Type,Available,Tons,Base Price,Purchase DM,Sale DM,Examples
+11,Basic Electronics,All,1d6 10,10000,"Industrial +2, High Tech +3, Rich +1","Non-industrial +2, Low-tech +1, Poor +1",Simple electronics including basic computers up to TL 10.
+12,Basic Machine Parts,All,1d6 10,10000,"Non-agricultural +2, Industrial +5","Non-industrial +3, Agricultural +2",Machine components and spare parts for common machinery.
+13,Basic Manufactured Goods,All,1d6 10,10000,"Non-agricultural +2, Industrial +5","Non-industrial +3, High population +2","Household appliances, clothing and so forth."
+14,Basic Raw Materials,All,1d6 10,5000,"Agricultural +3, Garden +2","Industrial +2, Poor +2","Metal, plastics, chemicals and other basic materials."
+15,Basic Consumables,All,1d6 10,2000,"Agricultural +3, Water world +2, Garden +1, Asteroid +4","Asteroid +1, Fluid Oceans +1, Ice-capped +1, High population +1","Food, drink and other agricultural products."
+16,Basic Ore,All,1d6 10,1000,"Asteroid +4, Ice-capped +0","Industrial +3, Non-industrial +1",Ore bearing common metals.
+21,Advanced Electronics,"Industrial, High Tech",1d6 5,100000,"Industrial +2, High Tech +3","Non-industrial +1, Rich +2, Asteroid +3","Advanced sensors, computers and other electronics up to TL 15."
+22,Advanced Machine Parts,"Industrial, High Tech",1d6 5,75000,"Industrial +2, High Tech +1","Asteroid +2, Non-industrial +1","Machine components and spare parts, including gravitic components."
+23,Advanced Manufactured Goods,"Industrial, High Tech",1d6 5,100000,"Industrial +2, High Tech +0","High population +1, Rich +2",Devices and clothing incorporating advanced technologies.
+24,Advanced Weapons,"Industrial, High Tech",1d6 5,150000,"Industrial +0, High Tech +2","Poor +1, Amber Zone +2, Red Zone +4","Firearms, explosives, ammunition, artillery and other military-grade weaponry."
+25,Advanced Vehicles,"Industrial, High Tech",1d6 5,180000,"Industrial +0, High Tech +2","Asteroid +2, Rich +2","Air/rafts, spacecraft, grav tanks and other vehicles up to TL 15."
+26,Biochemicals,"Agricultural, Water world",1d6 5,50000,"Agricultural +1, Water world +2 ",Industrial +2,"Biofuels, organic chemicals, extracts."
+31,Crystals and Gems,"Asteroid, Desert, Ice-capped",1d6 5,20000,"Asteroid +2, Desert +1, Ice-capped +1","Industrial +3, Rich +2","Diamonds, synthetic or natural gemstones."
+32,Cybernetics,High Tech,1d6,250000,High Tech +0,"Asteroid +1, Ice-capped +1, Rich +2","Cybernetic components, replacement limbs."
+33,Live Animals,"Agricultural, Garden",1d6 10,10000,"Agricultural +2, Garden +0",Low-population +3,"Riding animals, beasts of burden, exotic pets."
+34,Luxury Consumables,"Agricultural, Garden, Water world",1d6 10,20000,"Agricultural +2, Garden +0, Water world +1","Rich +2, High population +2","Rare foods, fine liquors."
+35,Luxury Goods,High population,1d6,200000,High population +0,Rich +4,Rare or extremely high-quality manufactured goods.
+36,Medical Supplies,"High Tech, High population",1d6 5,50000,"High Tech +2, High population +0","Industrial +2, Poor +1, Rich +1","Diagnostic equipment, basic drugs, cloning technology."
+41,Petrochemicals,"Desert, Fluid Oceans, Ice-capped, Water world",1d6 10,10000,"Desert +2, Fluid Oceans +0, Ice-capped +0, Water world +0","Industrial +2, Agricultural +1, Low-tech +2","Oil, liquid fuels."
+42,Pharmaceuticals,"Asteroid, Desert, High population, Water world",1d6,100000,"Asteroid +2, Desert +0, High population +1, Water world +0","Rich +2, Low-tech +1","Drugs, medical supplies, anagathatics, fast or slow drugs."
+43,Polymers,Industrial,1d6 10,7000,Industrial +0,"Rich +2, Non-industrial +1",Plastics and other synthetics.
+44,Precious Metals,"Asteroid, Desert, Ice-capped, Fluid Oceans",1d6,50000,"Asteroid +3, Desert +1, Ice-capped +2, Fluid Oceans +0","Rich +3, Industrial +2, High Tech +1","Gold, silver, platinum, rare elements."
+45,Radioactives,"Asteroid, Desert, Low-population",1d6,1000000,"Asteroid +2, Desert +0, Low-population -4","Industrial +3, High Tech +1, Non-industrial -2, Agricultural -3","Uranium, plutonium, unobtanium, rare elements."
+46,Robots,"Industrial, High Tech",1d6 5,400000,Industrial +0,"Agricultural +2, High Tech +1",Industrial and personal robots and drones.
+51,Spices,"Garden, Desert, Water world",1d6 5,6000,"Garden +0, Desert +2, Water world +0","High population +2, Rich +3, Poor +3","Preservatives, luxury food additives, natural drugs."
+52,Textiles,"Agricultural, Non-industrial",1d6 10,3000,"Agricultural +7, Non-industrial +0","High population +3, Non-agricultural +2",Clothing and fabrics.
+53,Uncommon Ore,"Asteroid, Ice-capped",1d6 10,5000,"Asteroid +4, Ice-capped +0","Industrial +3, Non-industrial +1",Ore containing precious or valuable metals.
+54,Uncommon Raw Materials,"Agricultural, Desert, Water world",1d6 10,20000,"Agricultural +2, Desert +0, Water world +1","Industrial +2, High Tech +1","Valuable metals like titanium, rare elements."
+55,Wood,"Agricultural, Garden",1d6 10,1000,"Agricultural +6, Garden +0","Rich +2, Industrial +1",Hard or beautiful woods and plant extracts.
+56,Vehicles,"Industrial, High Tech",1d6 10,15000,"Industrial +2, High Tech +1","Non-industrial +2, High population +1","Wheeled, tracked and other vehicles from TL 10 or lower."
+61,Illegal Biochemicals,"Agricultural, Water world",1d6,50000,"Agricultural +0, Water world +2",Industrial +6,"Dangerous chemicals, extracts from endangered species."
+62,Illegal Cybernetics,High Tech,1d6,250000,High Tech +0,"Asteroid +4, Ice-capped +4, Rich +8, Amber Zone +6, Red Zone +6","Combat cybernetics, illegal enhancements."
+63,Illegal Drugs,"Asteroid, Desert, High population, Water world",1d6,100000,"Asteroid +0, Desert +0, Garden +0, Water world +0","Rich +6, High population +6","Addictive drugs, combat drugs."
+64,Illegal Luxuries,"Agricultural, Garden, Water world",1d6,50000,"Agricultural +2, Garden +0, Water world +1","Rich +6, High population +4",Debauched or addictive luxuries.
+65,Illegal Weapons,"Industrial, High Tech",1d6 5,150000,"Industrial +0, High Tech +2","Poor +6, Amber Zone +8, Red Zone +10","Weapons of mass destruction, naval weapons."
+66,Exotics,,,,,,"Exotic goods are outside the normal trade rules, and cover such things are alien relics, prototype technology, unique plant or animal life, priceless treasures and so forth. Buying and selling exotic goods is a matter for roleplaying and adventure."

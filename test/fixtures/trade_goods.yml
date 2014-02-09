@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  available: MyText
+  d66: 1
+  ton_multiplier: 1
+  base_price: 1
+  purchase_dm: MyText
+  sale_dm: MyText
+  examples: MyText
+
+two:
+  name: MyString
+  available: MyText
+  d66: 1
+  ton_multiplier: 1
+  base_price: 1
+  purchase_dm: MyText
+  sale_dm: MyText
+  examples: MyText
