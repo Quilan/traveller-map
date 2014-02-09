@@ -1,0 +1,8 @@
+.label Brokers:
+- @system.brokers.each do |broker|
+  .data{id: "broker_#{broker.id}"}
+    = link_to broker.name, broker_path(broker, system_id: @system.id), class: 'colorbox'
+    (
+    = link_to 'delete', broker_path(broker, system_id: @system.id), remote: true, method: :delete, class: 'delete'
+    )
+.data= link_to "New broker", new_broker_path(system_id: @system.id), class: 'colorbox'

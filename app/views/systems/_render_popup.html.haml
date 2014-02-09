@@ -64,8 +64,5 @@
       %li
         .label Notes:
         .data= @system.notes
-      %li
-        .label Brokers:
-        - @system.brokers.each do |broker|
-          .data= link_to broker.name, broker_path(broker, system_id: @system.id), class: 'colorbox'
-        .data= link_to "New broker", new_broker_path(system_id: @system.id), class: 'colorbox'
+      %li#brokers
+        = render partial: 'broker_list'
