@@ -1,0 +1,22 @@
+// Place all the styles related to the brokers controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#broker.two_column {
+  ul {
+    li {
+    margin-bottom: 10px;
+    }
+    .label {
+      width: 32%;
+      text-align: left;
+    }
+    .data {
+      width: 32%;
+      text-align: left;
+      &.full {
+        width: 64%;
+      }
+    }
+  }
+}

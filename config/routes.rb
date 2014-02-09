@@ -4,6 +4,8 @@ TravellerMap::Application.routes.draw do
   resources :systems do
     get :render_popup
   end
+
+  resources :brokers
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,19 @@
+.popup_content
+  .two_column#broker
+    %ul
+      %li
+        .label Name:
+        .data>= @broker.name
+        .data> &nbsp;
+      %li
+        .label System
+        .data>= @broker.system.name
+        .data> &nbsp;
+      - @broker.broker_trade_goods.includes(:trade_good).each do |good|
+        %li
+          .label= good.trade_good.name
+          .data> Quantity: #{good.quantity} tonnes
+          .data> Purchase mod: #{good.trade_good.purchase_price_mod(@system)}
+          .data> Base price: #{number_with_delimiter(good.trade_good.base_price)} cr
+          .data> Sale mod: #{good.trade_good.sale_price_mod(@system)}
+          .data.full> Examples: #{good.trade_good.examples}

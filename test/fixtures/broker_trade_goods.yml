@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  broker_id: 
+  trade_good_id: 
+  quantity: 1
+
+two:
+  broker_id: 
+  trade_good_id: 
+  quantity: 1
