@@ -48,8 +48,9 @@
       %li
         .label Trade Codes:
         - @system.trade_codes.each do |code|
+          - next if code.name=~/zone$/i
           .data
-            = code
+            = code.name
       %li
         .label Travel Code:
         - if @system.travel_code.present?

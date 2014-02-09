@@ -11,7 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208082543) do
+ActiveRecord::Schema.define(version: 20140209084644) do
+
+  create_table "base_systems", force: true do |t|
+    t.integer  "system_id"
+    t.integer  "base_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "base_systems", ["base_id"], name: "index_base_systems_on_base_id", using: :btree
+  add_index "base_systems", ["system_id"], name: "index_base_systems_on_system_id", using: :btree
+
+  create_table "bases", force: true do |t|
+    t.string   "name"
+    t.string   "symbol"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "system_trade_codes", force: true do |t|
+    t.integer  "system_id"
+    t.integer  "trade_code_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "system_trade_codes", ["system_id"], name: "index_system_trade_codes_on_system_id", using: :btree
+  add_index "system_trade_codes", ["trade_code_id"], name: "index_system_trade_codes_on_trade_code_id", using: :btree
 
   create_table "systems", force: true do |t|
     t.string   "name"
@@ -35,6 +63,24 @@ ActiveRecord::Schema.define(version: 20140208082543) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "subsector_id"
+  end
+
+  create_table "trade_code_goods", force: true do |t|
+    t.integer  "trade_good_id"
+    t.integer  "trade_code_id"
+    t.integer  "dm"
+    t.string   "kind"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "trade_code_goods", ["trade_code_id"], name: "index_trade_code_goods_on_trade_code_id", using: :btree
+  add_index "trade_code_goods", ["trade_good_id"], name: "index_trade_code_goods_on_trade_good_id", using: :btree
+
+  create_table "trade_codes", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "trade_goods", force: true do |t|

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  trade_good_id: 
+  trade_code: 
+  dm: 1
+  kind: MyString
+
+two:
+  trade_good_id: 
+  trade_code: 
+  dm: 1
+  kind: MyString
