@@ -9,6 +9,11 @@
         .label System
         .data>= @broker.system.name
         .data> &nbsp;
+    #toggles
+      = link_to 'purchase', '#purchase', class: 'toggle active'
+      \|
+      = link_to 'sell', '#sell', class: 'toggle'
+    %ul#purchase
       - @broker.broker_trade_goods.includes(:trade_good).each do |good|
         %li
           .label= good.trade_good.name
@@ -17,3 +22,9 @@
           .data> Base price: #{number_with_delimiter(good.trade_good.base_price)} cr
           .data> Sale mod: #{good.trade_good.sale_price_mod(@system)}
           .data.full> Examples: #{good.trade_good.examples}
+    %ul#sell{style: 'display:none'}
+      - TradeGood.all.each do |tg|
+        %li
+          .label= tg.name
+          .data> Base price: #{number_with_delimiter(tg.base_price)} cr
+          .data> Sale mod: #{tg.sale_price_mod(@system)}

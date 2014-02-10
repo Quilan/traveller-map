@@ -1,5 +1,7 @@
 class BrokersController < ApplicationController
 
+  layout false
+
   before_filter :find_system
   def new
     @broker = @system.generate_broker
