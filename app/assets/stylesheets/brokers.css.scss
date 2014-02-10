@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.clear {
+  clear: both;
+}
+
 #broker.two_column {
   #toggles {
     width: 90%;
@@ -27,6 +31,32 @@
       text-align: left;
       &.full {
         width: 64%;
+      }
+    }
+  }
+}
+
+#broker-content {
+  color: white;
+  .filters {
+    li {
+      float: left;
+      margin-right: 10px;
+    }
+  }
+}
+#broker-list {
+  color: white;
+  ul.planet {
+    width: 49%;
+    float: left;
+  }
+  table {
+    width: 100%;
+    td,th {
+      text-align: right;
+      &.left {
+        text-align: left;
       }
     }
   }
