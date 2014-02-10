@@ -53,8 +53,11 @@
   }
   table {
     width: 100%;
+    border-collapse: collapse;
     td,th {
       text-align: right;
+      border: 1px solid white;
+      padding: 5px;
       &.left {
         text-align: left;
       }
