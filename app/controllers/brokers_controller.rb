@@ -1,8 +1,19 @@
 class BrokersController < ApplicationController
 
-  layout false
+  layout false, except: :index
 
-  before_filter :find_system
+  before_filter :find_system, except: :index
+
+  def index
+    respond_to do |format|
+      format.html
+      format.js {
+        @from = System.find(params[:from])
+        @to = System.find(params[:to])
+      }
+    end
+  end
+
   def new
     @broker = @system.generate_broker
     redirect_to broker_path(@broker, system_id: @system.id)

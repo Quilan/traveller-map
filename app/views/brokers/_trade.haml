@@ -1,0 +1,65 @@
+
+%ul.planet
+  %li
+    .label Name:
+    .data= @from.name
+  %li
+    .label Trade Codes:
+    - @from.trade_codes.each do |code|
+      - next if code.name=~/zone$/i
+      .data
+        = code.name
+  %li
+    .label Travel Code:
+    - if @from.travel_code.present?
+      .data{:class => @from.travel_code == "Amber" ? "yellow-status" : "red-status"}= @from.travel_code
+    -else
+      .data{:class => "green-status"} Green
+  %li
+    .label Restrictions:
+    - @from.show_contraband.each do |contraband|
+      .data= contraband
+
+%ul.planet
+  %li
+    .label Name:
+    .data= @to.name
+  %li
+    .label Trade Codes:
+    - @to.trade_codes.each do |code|
+      - next if code.name=~/zone$/i
+      .data
+        = code.name
+  %li
+    .label Travel Code:
+    - if @to.travel_code.present?
+      .data{:class => @to.travel_code == "Amber" ? "yellow-status" : "red-status"}= @to.travel_code
+    -else
+      .data{:class => "green-status"} Green
+  %li
+    .label Restrictions:
+    - @to.show_contraband.each do |contraband|
+      .data= contraband
+
+%table
+  %thead
+    %tr
+      %th.left Trade Good
+      %th.left Examples
+      %th Base Price
+      %th Purchase Mod
+      %th Sale Mod
+  - TradeGood.all.each do |g|
+    - if g.d66 == 66
+      %tr
+        %td.left= g.name
+        %td.left{colspan: 4}= g.examples
+    - else
+      %tr
+        %td.left= g.name
+        %td.left= g.examples
+        %td
+          = number_with_delimiter(g.base_price)
+          cr
+        %td= g.purchase_price_mod(@from)
+        %td= g.sale_price_mod(@to)

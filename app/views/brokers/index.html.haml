@@ -1,0 +1,14 @@
+#broker-content
+  = form_tag brokers_path, remote: true, :method => :get do
+    %label Specify trade route
+    %ul.filters
+      %li
+        %label From
+        = select_tag "from", options_from_collection_for_select(System.with_planets.order(:name), :id, :name)
+      %li
+        %label To
+        = select_tag "to", options_from_collection_for_select(System.with_planets.order(:name), :id, :name)
+      %li
+        = submit_tag "submit"
+    .clear
+  #broker-list
