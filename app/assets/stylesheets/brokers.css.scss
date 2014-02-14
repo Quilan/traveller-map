@@ -54,12 +54,28 @@
   table {
     width: 100%;
     border-collapse: collapse;
-    td,th {
+    th {
+      text-align: center;
+    } td {
       text-align: right;
+    }
+    td,th {
       border: 1px solid white;
       padding: 5px;
       &.left {
         text-align: left;
+      }
+      &.quantity {
+        width: 80px;
+        select {
+          width: 100%;
+        }
+        input {
+          width: 95%;
+        }
+      }
+      &.total {
+        width: 100px;
       }
     }
   }

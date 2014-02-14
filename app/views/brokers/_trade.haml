@@ -49,17 +49,29 @@
       %th Base Price
       %th Purchase Mod
       %th Sale Mod
+      %th.quantity Quantity
+      %th.quantity
+        Roll
+        = select_tag "kind", options_for_select(%w(purchase sell))
+      %th.total Total
   - TradeGood.all.each do |g|
     - if g.d66 == 66
       %tr
         %td.left= g.name
-        %td.left{colspan: 4}= g.examples
+        %td.left{colspan: 7}= g.examples
     - else
       %tr
         %td.left= g.name
         %td.left= g.examples
-        %td
+        %td.price
           = number_with_delimiter(g.base_price)
           cr
         %td= g.purchase_price_mod(@from)
         %td= g.sale_price_mod(@to)
+        %td.quantity= text_field_tag "quantity", ''
+        %td.quantity= text_field_tag "roll", ''
+        %td.total &nbsp;
+  %tfoot
+    %tr
+      %td{colspan: 7} Total:
+      %td.total 0 cr
