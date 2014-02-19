@@ -1,5 +1,5 @@
 .content
-  -@systems.each do |row|
+  -@systems.each do |idx,row|
     .hexrow
       - row.each do |system|
         .hex{:id => system.id, :class => system.name.present? ? "present" : ""}
