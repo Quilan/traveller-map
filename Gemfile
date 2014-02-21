@@ -26,6 +26,8 @@ gem 'faker'
 
 gem 'uglifier'
 
+gem 'devise'
+
 # Deploy with Capistrano
 group :development do
   gem 'capistrano'
