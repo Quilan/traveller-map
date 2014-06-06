@@ -246,26 +246,25 @@ span{
   right:15px;
   top:25px;
 }
-.amber{
+.amber, .red, .purple {
   z-index:-1;
   position:absolute;
   width:96px;
   height:96px;
   border-radius: 50%;
-  border:2px solid yellow;
+
   top:50%;
   margin-top:-50px;
 
 }
+.amber {
+  border:2px solid yellow;
+}
 .red{
-  z-index:-1;
-  position:absolute;
-  width:96px;
-  height:96px;
-  border-radius:50%;
   border:2px solid red;
-  top: 50%;
-  margin-top:-50px;
+}
+.purple{
+  border:2px solid purple;
 }
 .name{
   margin-top:50px;
@@ -303,6 +302,9 @@ ul{
 }
 .yellow-status{
   color:yellow;
+}
+.purple-status{
+  color:purple;
 }
 .green-status{
   color:green;

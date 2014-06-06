@@ -8,6 +8,8 @@ class System < ActiveRecord::Base
   # serialize :trade_codes
   serialize :links
   # serialize :bases
+  belongs_to :subsector
+  has_one :user, through: :subsector
 
   has_many :base_systems
   has_many :bases, through: :base_systems, source: :base
@@ -15,7 +17,7 @@ class System < ActiveRecord::Base
   has_many :system_trade_codes
   has_many :trade_codes, through: :system_trade_codes
 
-  scope :with_planets, where("name is not null")
+  scope :with_planets, -> {where("name is not null")}
   has_many :brokers
 
   WORLD_SIZES = {
@@ -270,6 +272,10 @@ class System < ActiveRecord::Base
     b.assign_items(self)
     b.save!
     b
+  end
+
+  def gmed_by?(user)
+    user == self.user
   end
 
 end

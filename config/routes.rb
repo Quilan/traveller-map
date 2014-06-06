@@ -1,9 +1,14 @@
 TravellerMap::Application.routes.draw do
 
+  # get "subsectors/index"
+  # get "subsectors/show"
   devise_for :users
-  root :to => "systems#index"
-  resources :systems do
-    get :render_popup
+  root :to => "subsectors#index"
+  get "systems/:id/render_popup" => "systems#render_popup"
+  resources :subsectors do
+    resources :systems do
+      get :render_popup
+    end
   end
 
   resources :brokers

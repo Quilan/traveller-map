@@ -14,6 +14,8 @@ tables = conn.execute("show tables").map { |r| r[0] }
 tables.delete "schema_migrations"
 tables.each { |t| conn.execute("TRUNCATE #{t}") }
 
+Subsector.create(name: "First Flight")
+
 trade_codes = ["Agricultural",
 "Asteroid",
 "Barren",
@@ -58,6 +60,7 @@ CSV.foreach("db/seeds/traveller_universe.csv", :headers => true, :header_convert
   end
   bases = system[:bases].split(", ").reject(&:blank?).map{|b| Base.find_by_name(b)}
   System.create(
+    :subsector => Subsector.first,
     :row => system[:row],
     :col => system[:col],
     :name => system[:name],

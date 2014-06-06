@@ -4,7 +4,7 @@
 $(document).ready ->
   $('.present').click ->
     $.colorbox({
-      href: "systems/"+ $(this).attr('id') + "/render_popup"
+      href: "/systems/"+ $(this).attr('id') + "/render_popup"
     })
 
 $(document).on 'click', '#brokers .colorbox', (e) ->
