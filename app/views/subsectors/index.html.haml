@@ -1,4 +1,4 @@
 .content
   %h1 Subsector list
   - @subsectors.each do |subsector|
-    = link_to subsector.name, subsectors_path(subsector)
+    = link_to subsector.name, subsector_path(subsector)
