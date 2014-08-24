@@ -283,7 +283,7 @@ class System < ActiveRecord::Base
   def calculate_trade_codes
     self.trade_codes = nil
     #Agricultural
-    if (4..9).include? atmosphere && (4..8).include? hydrographics && (5..7).include? population
+    if (4..9).include?(atmosphere) && (4..8).include?(hydrographics) && (5..7).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Agricultural")
     end
     #Asteroid
@@ -303,7 +303,7 @@ class System < ActiveRecord::Base
       self.trade_codes << TradeCode.find_by(name: "Fluid Oceans")
     end
     #Garden
-    if size >= 5 && (4..9).include? atmosphere && (4..8).include? hydrographics
+    if size >= 5 && (4..9).include?(atmosphere) && (4..8).include?(hydrographics)
       self.trade_codes << TradeCode.find_by(name: "Garden")
     end
     #High Population
@@ -319,11 +319,11 @@ class System < ActiveRecord::Base
       self.trade_codes << TradeCode.find_by(name: "Ice-Capped")
     end
     #Industrial
-    if [0, 1, 2, 4, 7, 9].include? atmosphere && population >= 9
+    if [0, 1, 2, 4, 7, 9].include?(atmosphere) && population >= 9
       self.trade_codes << TradeCode.find_by(name: "Industrial")
     end
     #Low Population
-    if (1..3).include? population
+    if (1..3).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Low Population")
     end
     #Low Technology
@@ -331,19 +331,19 @@ class System < ActiveRecord::Base
       self.trade_codes << TradeCode.find_by(name: "Low Technology")
     end
     #Non-Agricultural
-    if (0..3).include? atmosphere && (0..3).include? hydrographics && population >= 6
+    if (0..3).include?(atmosphere) && (0..3).include?(hydrographics) && population >= 6
       self.trade_codes << TradeCode.find_by(name: "Non-Agricultural")
     end
     #Non-Industrial
-    if (4..6).include? population
+    if (4..6).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Non-Industrial")
     end
     #Poor
-    if (2..5).include? atmosphere && hydrographics <= 3
+    if (2..5).include?(atmosphere) && hydrographics <= 3
       self.trade_codes << TradeCode.find_by(name: "Poor")
     end
     #Rich
-    if [6, 8].include? atmosphere && (6..8).include? population
+    if [6, 8].include?(atmosphere) && (6..8).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Rich")
     end
     #Vacuum
