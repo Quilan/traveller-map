@@ -17,6 +17,8 @@ class System < ActiveRecord::Base
   has_many :system_trade_codes
   has_many :trade_codes, through: :system_trade_codes
 
+  after_save :calculate_trade_codes
+
   scope :with_planets, -> {where("name is not null")}
   has_many :brokers
 
@@ -276,6 +278,82 @@ class System < ActiveRecord::Base
 
   def gmed_by?(user)
     user == self.user
+  end
+
+  def calculate_trade_codes
+    self.trade_codes = nil
+    #Agricultural
+    if (4..9).include? atmosphere && (4..8).include? hydrographics && (5..7).include? population
+      self.trade_codes << TradeCode.find_by(name: "Agricultural")
+    end
+    #Asteroid
+    if size == 0 && atmosphere == 0 && hydrographics == 0
+      self.trade_codes << TradeCode.find_by(name: "Asteroid")
+    end
+    #Barren
+    if population == 0 && government == 0 && law <= 0
+      self.trade_codes << TradeCode.find_by(name: "Barren")
+    end
+    #Desert
+    if atmosphere >= 2 && hydrographics == 0
+      self.trade_codes << TradeCode.find_by(name: "Desert")
+    end
+    #Fluid Oceans
+    if atmosphere >= 10 && hydrographics >= 1
+      self.trade_codes << TradeCode.find_by(name: "Fluid Oceans")
+    end
+    #Garden
+    if size >= 5 && (4..9).include? atmosphere && (4..8).include? hydrographics
+      self.trade_codes << TradeCode.find_by(name: "Garden")
+    end
+    #High Population
+    if population >= 9
+      self.trade_codes << TradeCode.find_by(name: "High Population")
+    end
+    #High Technology
+    if tech >= 12
+      self.trade_codes << TradeCode.find_by(name: "High Technology")
+    end
+    #Ice-Capped
+    if hydrographics >= 1 && atmosphere <= 1
+      self.trade_codes << TradeCode.find_by(name: "Ice-Capped")
+    end
+    #Industrial
+    if [0, 1, 2, 4, 7, 9].include? atmosphere && population >= 9
+      self.trade_codes << TradeCode.find_by(name: "Industrial")
+    end
+    #Low Population
+    if (1..3).include? population
+      self.trade_codes << TradeCode.find_by(name: "Low Population")
+    end
+    #Low Technology
+    if tech <= 5
+      self.trade_codes << TradeCode.find_by(name: "Low Technology")
+    end
+    #Non-Agricultural
+    if (0..3).include? atmosphere && (0..3).include? hydrographics && population >= 6
+      self.trade_codes << TradeCode.find_by(name: "Non-Agricultural")
+    end
+    #Non-Industrial
+    if (4..6).include? population
+      self.trade_codes << TradeCode.find_by(name: "Non-Industrial")
+    end
+    #Poor
+    if (2..5).include? atmosphere && hydrographics <= 3
+      self.trade_codes << TradeCode.find_by(name: "Poor")
+    end
+    #Rich
+    if [6, 8].include? atmosphere && (6..8).include? population
+      self.trade_codes << TradeCode.find_by(name: "Rich")
+    end
+    #Vacuum
+    if atmosphere == 0
+      self.trade_codes << TradeCode.find_by(name: "Vacuum")
+    end
+    #Water World
+    if hydrographics == 10
+      self.trade_codes << TradeCode.find_by(name: "Water World")
+    end
   end
 
 end
