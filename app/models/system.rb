@@ -282,6 +282,7 @@ class System < ActiveRecord::Base
 
   def calculate_trade_codes
     self.trade_codes = []
+    return unless name.present?
     #Agricultural
     if (4..9).include?(atmosphere) && (4..8).include?(hydrographics) && (5..7).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Agricultural")
@@ -312,7 +313,7 @@ class System < ActiveRecord::Base
     end
     #High Technology
     if tech >= 12
-      self.trade_codes << TradeCode.find_by(name: "High Technology")
+      self.trade_codes << TradeCode.find_by(name: "High Tech")
     end
     #Ice-Capped
     if hydrographics >= 1 && atmosphere <= 1
@@ -328,7 +329,7 @@ class System < ActiveRecord::Base
     end
     #Low Technology
     if tech <= 5
-      self.trade_codes << TradeCode.find_by(name: "Low Technology")
+      self.trade_codes << TradeCode.find_by(name: "Low Tech")
     end
     #Non-Agricultural
     if (0..3).include?(atmosphere) && (0..3).include?(hydrographics) && population >= 6
