@@ -281,7 +281,7 @@ class System < ActiveRecord::Base
   end
 
   def calculate_trade_codes
-    self.trade_codes = nil
+    self.trade_codes = []
     #Agricultural
     if (4..9).include?(atmosphere) && (4..8).include?(hydrographics) && (5..7).include?(population)
       self.trade_codes << TradeCode.find_by(name: "Agricultural")
