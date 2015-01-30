@@ -9,7 +9,7 @@ set :scm, :git
 # set :pty, true
 
 set :linked_files, %w{config/database.yml}
-set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
+set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system public/assets}
 set :use_sudo, true
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
