@@ -15,6 +15,7 @@ tables.delete "schema_migrations"
 tables.each { |t| conn.execute("TRUNCATE #{t}") }
 
 Subsector.create(name: "First Flight")
+Subsector.create(name: "Too Many Feathers")
 
 trade_codes = ["Agricultural",
 "Asteroid",
@@ -52,7 +53,7 @@ CSV.foreach("db/seeds/traveller_universe.csv", :headers => true, :header_convert
   system[:contraband] ||= []
   system[:links] ||=[]
 
-  trade_codes = system[:trade_codes].split(", ").reject(&:blank?).map{|t| TradeCode.find_by_name(t)}
+  # trade_codes = system[:trade_codes].split(", ").reject(&:blank?).map{|t| TradeCode.find_by_name(t)}
   if system[:travel_code]=='Amber'
     trade_codes << TradeCode.find_by_name('Amber Zone')
   elsif system[:travel_code] == 'Red'
@@ -74,7 +75,43 @@ CSV.foreach("db/seeds/traveller_universe.csv", :headers => true, :header_convert
     :starport => system[:starport],
     :tech => system[:tech],
     :bases => bases,
-    :trade_codes => trade_codes,
+    # :trade_codes => trade_codes,
+    :contraband => system[:contraband].present? ? system[:contraband].split(", ") : [],
+    :travel_code => system[:travel_code],
+    :links => system[:links].present? ? system[:links].split(",").map(&:to_i) : [],
+    :notes => system[:notes]
+    )
+end
+
+CSV.foreach("db/seeds/traveller_universe_2.csv", :headers => true, :header_converters => :symbol) do |system|
+  system[:bases] ||= []
+  system[:trade_codes] ||= []
+  system[:contraband] ||= []
+  system[:links] ||=[]
+
+  # trade_codes = system[:trade_codes].split(", ").reject(&:blank?).map{|t| TradeCode.find_by_name(t)}
+  if system[:travel_code]=='Amber'
+    trade_codes << TradeCode.find_by_name('Amber Zone')
+  elsif system[:travel_code] == 'Red'
+    trade_codes << TradeCode.find_by_name('Red Zone')
+  end
+  bases = system[:bases].split(", ").reject(&:blank?).map{|b| Base.find_by_name(b)}
+  System.create(
+    :subsector => Subsector.last,
+    :row => system[:row],
+    :col => system[:col],
+    :name => system[:name],
+    :size => system[:size],
+    :atmosphere => system[:atmosphere],
+    :temperature => system[:temperature],
+    :hydrographics => system[:hydrographics],
+    :population => system[:population],
+    :government => system[:government],
+    :law => system[:law],
+    :starport => system[:starport],
+    :tech => system[:tech],
+    :bases => bases,
+    # :trade_codes => trade_codes,
     :contraband => system[:contraband].present? ? system[:contraband].split(", ") : [],
     :travel_code => system[:travel_code],
     :links => system[:links].present? ? system[:links].split(",").map(&:to_i) : [],

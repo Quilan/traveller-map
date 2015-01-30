@@ -355,6 +355,12 @@ class System < ActiveRecord::Base
     if hydrographics == 10
       self.trade_codes << TradeCode.find_by(name: "Water World")
     end
+    if travel_code =='Amber'
+      trade_codes << TradeCode.find_by_name('Amber Zone')
+    end
+    if travel_code == 'Red'
+      trade_codes << TradeCode.find_by_name('Red Zone')
+    end
   end
 
 end
